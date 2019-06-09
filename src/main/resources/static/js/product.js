@@ -1,4 +1,6 @@
 $(function () {
+
+    // onclick="selectAttr(this);
     /*公共部分
      * 导航栏
      * footer CopyRight
@@ -8,34 +10,48 @@ $(function () {
 
     // getProducts();
     // getProductByGet();
-    $("#balance").click(function () {
-        // getProductByGet("balance");
-        $.cookie('product', 'balance');
+    $("[menuname]").click(function (e) {
+        // alert($(e.target).attr("id"));
+        let menuName=$(e.target).attr("menuName");
+        //设置cookie
+        $.cookie('product', menuName);
+        //获取cookie
+        // $.cookie('product')
+        getProductByGet(menuName);
     });
 
-    $("#brassAngle").click(function () {
-        $.cookie('product', 'brassAngle');
-    });
-    $("#brassBall").click(function () {
-        $.cookie('product', 'brassBall');
-    });
-    $("#bronze").click(function () {
-        $.cookie('product', 'bronze');
-    });
-    $("#check").click(function () {
-        $.cookie('product', 'check');
-    });
-    $("#gate").click(function () {
-        // getProductByGet("gate");
-        $.cookie('product', 'gate');
-    });
-    $("#pressureReduce").click(function () {
-        $.cookie('product', 'pressureReduce');
 
-    });
-    getProductByGet($.cookie('product'));
+    // $("#balance").click(function () {
+    //     $.cookie('product', 'balance');
+    // });
+    // $("#brassAngle").click(function () {
+    //     $.cookie('product', 'brassAngle');
+    // });
+    // $("#brassBall").click(function () {
+    //     $.cookie('product', 'brassBall');
+    // });
+    // $("#bronze").click(function () {
+    //     $.cookie('product', 'bronze');
+    // });
+    // $("#check").click(function () {
+    //     $.cookie('product', 'check');
+    // });
+    // $("#gate").click(function () {
+    //     // getProductByGet("gate");
+    //     $.cookie('product', 'gate');
+    // });
+    // $("#pressureReduce").click(function () {
+    //     $.cookie('product', 'pressureReduce');
+    //
+    // });
+   getProductByGet($.cookie('product'));
 });
+var menuClick=  function (e) {
+    // getProductByGet("balance");
 
+    let id = $(e.target).attr("id");
+    $.cookie('product', id);
+};
 var getProducts = function () {
 
     $.ajax({
@@ -67,6 +83,7 @@ var getProductByGet = function (product) {
         // for (let val of data) {
         //    val.imageURL
         // }
+
         $('#content').empty();
         for (let i = 0; i < data.length; i++) {
             if (i % 2 == 0) {
@@ -78,8 +95,8 @@ var getProductByGet = function (product) {
                     "            <div class=\"col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6\">\n" +
                     "                <hr class=\"section-heading-spacer\">\n" +
                     "                <div class=\"clearfix\"></div>\n" +
-                    "                <h2 class=\"section-heading\">"+data[i].productname+"</h2>\n" +
-                    "                <p class=\"lead\">Description:"+data[i].description+"</p>\n" +
+                    "                <h2 class=\"section-heading\">" + data[i].productname + "</h2>\n" +
+                    "                <p class=\"lead\">Description:" + data[i].description + "</p>\n" +
                     "            </div>\n" +
                     "            <div class=\"col-lg-5 col-sm-pull-6  col-sm-6\">\n" +
                     "                <img class=\"img-responsive\" src=\"" + data[i].imagepath + "\" alt=\"\">\n" +
@@ -97,8 +114,8 @@ var getProductByGet = function (product) {
                     "            <div class=\"col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6\">\n" +
                     "                <hr class=\"section-heading-spacer\">\n" +
                     "                <div class=\"clearfix\"></div>\n" +
-                    "                <h2 class=\"section-heading\">"+data[i].productname+"</h2>\n" +
-                    "                <p class=\"lead\">Description:"+data[i].description+"</p>\n" +
+                    "                <h2 class=\"section-heading\">" + data[i].productname + "</h2>\n" +
+                    "                <p class=\"lead\">Description:" + data[i].description + "</p>\n" +
                     "            </div>\n" +
                     "            <div class=\"col-lg-5 col-sm-pull-6  col-sm-6\">\n" +
                     "                <img class=\"img-responsive\" src=\"" + data[i].imagepath + "\" alt=\"\">\n" +
@@ -130,8 +147,8 @@ var getProductByGet2 = function (product) {
                     "            <div class=\"col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6\">\n" +
                     "                <hr class=\"section-heading-spacer\">\n" +
                     "                <div class=\"clearfix\"></div>\n" +
-                    "                <h2 class=\"section-heading\">"+data[i].productname+"</h2>\n" +
-                    "                <p class=\"lead\">Description:"+"+data[i].description+"+"</p>\n" +
+                    "                <h2 class=\"section-heading\">" + data[i].productname + "</h2>\n" +
+                    "                <p class=\"lead\">Description:" + "+data[i].description+" + "</p>\n" +
                     "            </div>\n" +
                     "            <div class=\"col-lg-5 col-sm-pull-6  col-sm-6\">\n" +
                     "                <img class=\"img-responsive\" src=\"" + data[i].imagepath + "\" alt=\"\">\n" +
@@ -149,8 +166,8 @@ var getProductByGet2 = function (product) {
                     "            <div class=\"col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6\">\n" +
                     "                <hr class=\"section-heading-spacer\">\n" +
                     "                <div class=\"clearfix\"></div>\n" +
-                    "                <h2 class=\"section-heading\">"+data[i].productname+"</h2>\n" +
-                    "                <p class=\"lead\">Description:"+"+data[i].description+"+"</p>\n" +
+                    "                <h2 class=\"section-heading\">" + data[i].productname + "</h2>\n" +
+                    "                <p class=\"lead\">Description:" + "+data[i].description+" + "</p>\n" +
                     "            </div>\n" +
                     "            <div class=\"col-lg-5 col-sm-pull-6  col-sm-6\">\n" +
                     "                <img class=\"img-responsive\" src=\"" + data[i].imagepath + "\" alt=\"\">\n" +
