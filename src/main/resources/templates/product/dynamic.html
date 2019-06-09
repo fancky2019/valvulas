@@ -26,6 +26,7 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
     <![endif]-->
 
 </head>
@@ -59,13 +60,13 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-left" role="menu">
                         <!--<li class="disabled text-center"><a href="#"></a></li>-->
-                        <li  class="text-center"><a href="balance" id="balance">Balance Valve</a></li>
-                        <li  class="text-center"><a href="brassAngle" id="brassAngle">Brass Angle Valve</a></li>
-                        <li  class="text-center"><a href="brassBall" id="brassBall">Brass Ball Valve</a></li>
-                        <li  class="text-center"><a href="bronze" id="bronze">Bronze Valve</a></li>
-                        <li  class="text-center"><a href="check" id="check">Check Valve</a></li>
-                        <li  class="text-center"><a href="gate" id="gate">Gate Valve</a></li>
-                        <li  class="text-center"><a href="pressureReduce">Pressure Reduce Valve</a></li>
+                        <li  class="text-center"><a href="#" menuName="balance">Balance Valve</a></li>
+                        <li  class="text-center"><a href="#"  menuName="brassAngle">Brass Angle Valve</a></li>
+                        <li  class="text-center"><a href="#"  menuName="brassBall">Brass Ball Valve</a></li>
+                        <li  class="text-center"><a href="#"  menuName="bronze">Bronze Valve</a></li>
+                        <li  class="text-center"><a  href="#" menuName="check">Check Valve</a></li>
+                        <li  class="text-center"><a href="#" menuName="gate">Gate Valve</a></li>
+                        <li  class="text-center"><a href="#" menuName="pressureReduce">Pressure Reduce Valve</a></li>
                         <!--<li class="divider"></li>-->
                         <!--分割线-->
                     </ul>
@@ -86,11 +87,14 @@
 
 
 <div class="first-section-a"></div>
-<!--<h1 th:text="${host}">Hello World</h1>-->
-<input id="productName"  style="display:none" value="${product}">
-<div id="content">
+
+
+<div class="wrap">
+<div class="main" id="content">
 </div>
-<!--footer-->
+</div>
+
+
 <!-- Footer -->
 <footer>
     <div class="container">
@@ -109,6 +113,7 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery/jquery.cookie.js"></script>
+<script src="js/index.js"></script>
 <script src="js/product.js"></script>
 <script>
     // $(".headerpage").load("header.html");

@@ -30,6 +30,7 @@ public class HomeController {
 
     @RequestMapping("/contract")
     public String contract() {
+
         return "contract";
     }
 
@@ -55,8 +56,7 @@ public class HomeController {
     }
 
     @RequestMapping("/bronze")
-    public String bronze()
-    {
+    public String bronze() {
         return "product/dynamic";
 //        return "product/bronze";
     }
@@ -77,6 +77,11 @@ public class HomeController {
     public String pressureReduce() {
         return "product/dynamic";
 //        return "product/pressureReduce";
+    }
+
+    @RequestMapping("/productDynamic")
+    public String productDynamic() {
+        return "product/dynamic";
     }
     //endregion
 }
