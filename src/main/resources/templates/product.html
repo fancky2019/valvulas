@@ -46,15 +46,27 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-
                 <li>
-                    <a href="index">Home</a>
-                </li>
+                    <a href="index">Home</a></li>
                 <li>
                     <a href="service">Services</a>
                 </li>
-                <li>
-                    <a href="product">Products</a>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Product
+                        <!--<span class="caret"></span>-->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                        <!--<li class="disabled text-center"><a href="#"></a></li>-->
+                        <li  class="text-center"><a href="productDynamic" menuName="balance">Balance Valve</a></li>
+                        <li  class="text-center"><a href="productDynamic"  menuName="brassAngle">Brass Angle Valve</a></li>
+                        <li  class="text-center"><a href="productDynamic"  menuName="brassBall">Brass Ball Valve</a></li>
+                        <li  class="text-center"><a href="productDynamic"  menuName="bronze">Bronze Valve</a></li>
+                        <li  class="text-center"><a  href="productDynamic" menuName="check">Check Valve</a></li>
+                        <li  class="text-center"><a href="productDynamic" menuName="gate">Gate Valve</a></li>
+                        <li  class="text-center"><a href="productDynamic" menuName="pressureReduce">Pressure Reduce Valve</a></li>
+                        <!--<li class="divider"></li>-->
+                        <!--分割线-->
+                    </ul>
                 </li>
                 <li>
                     <a href="contract">Contact Us</a>
