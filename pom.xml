@@ -90,6 +90,14 @@
             <version>1.2.52</version>
         </dependency>
 
+
+
+
+<!--&lt;!&ndash;        默认日志：新建并配置日志配置文件：resources/logback.xml&ndash;&gt;-->
+<!--        <dependency>-->
+<!--        <groupId>org.slf4j</groupId>-->
+<!--        <artifactId>slf4j-log4j12</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
