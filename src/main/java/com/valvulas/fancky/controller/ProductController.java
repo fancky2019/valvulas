@@ -17,23 +17,20 @@ import java.util.List;
 @Controller
 public class ProductController {
 
-    Logger logger=LoggerFactory.getLogger(ProductController.class);
+    Logger logger = LoggerFactory.getLogger(ProductController.class);
 
     @Resource
     private ProductService productService;
 
     @RequestMapping("/getProducts")
     @ResponseBody
-    public   List<Product> getProducts(Product product) {
-        List<Product> list=new ArrayList<>() ;
+    public List<Product> getProducts(Product product) {
+        List<Product> list = new ArrayList<>();
         try {
-            list = productService.getProducts( product);
-            logger.error("ddd");
+            list = productService.getProducts(product);
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
         }
-       catch (Exception ex)
-       {
-           logger.error(ex.getMessage());
-       }
         return list;
     }
 
