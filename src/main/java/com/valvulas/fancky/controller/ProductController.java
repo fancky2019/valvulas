@@ -34,4 +34,17 @@ public class ProductController {
         return list;
     }
 
+    @RequestMapping("/getProductNames")
+    @ResponseBody
+    public List<String> getProductNames() {
+        List<String> list = new ArrayList<>();
+        try {
+            list = productService.getProductNames();
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
+        }
+        return list;
+    }
+
+
 }

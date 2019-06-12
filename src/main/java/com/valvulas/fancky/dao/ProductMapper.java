@@ -26,4 +26,6 @@ public interface ProductMapper {
 
     List<Product> getProducts(Product product);
 
+    List<String> getProductNames();
+
 }

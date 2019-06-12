@@ -1,57 +1,50 @@
 $(function () {
 
     // onclick="selectAttr(this);
-    /*公共部分
-     * 导航栏
-     * footer CopyRight
-     */
-    // $(".headerpage").load("../html/header.html");
-    // $(".footerpage").load("../html/footer.html");
 
-    // getProducts();
-    // getProductByGet();
-    $("[menuname]").click(function (e) {
-        // alert($(e.target).attr("id"));
-        let menuName=$(e.target).attr("menuName");
-        //设置cookie
-        $.cookie('product', menuName);
-        //获取cookie
-        // $.cookie('product')
-        getProductByGet(menuName);
-    });
+    // $("[menuname]").click(function (e) {
+    //     // alert($(e.target).attr("id"));
+    //     let menuName = $(e.target).attr("menuName");
+    //     //设置cookie
+    //     $.cookie('product', menuName);
+    //     //获取cookie
+    //     // $.cookie('product')
+    //     getProductByGet(menuName);
+    // });
 
 
     // $("#balance").click(function () {
     //     $.cookie('product', 'balance');
     // });
-    // $("#brassAngle").click(function () {
-    //     $.cookie('product', 'brassAngle');
-    // });
-    // $("#brassBall").click(function () {
-    //     $.cookie('product', 'brassBall');
-    // });
-    // $("#bronze").click(function () {
-    //     $.cookie('product', 'bronze');
-    // });
-    // $("#check").click(function () {
-    //     $.cookie('product', 'check');
-    // });
-    // $("#gate").click(function () {
-    //     // getProductByGet("gate");
-    //     $.cookie('product', 'gate');
-    // });
-    // $("#pressureReduce").click(function () {
-    //     $.cookie('product', 'pressureReduce');
-    //
-    // });
-   getProductByGet($.cookie('product'));
-});
-var menuClick=  function (e) {
-    // getProductByGet("balance");
 
-    let id = $(e.target).attr("id");
-    $.cookie('product', id);
-};
+    createProductMenus();
+    getProductByGet($.cookie('product'));
+});
+
+var createProductMenus = function () {
+    $.get("/getProductNames", function (data) {
+        $('.dropdown-menu.dropdown-menu-left').empty();
+        for (let i = 0; i < data.length; i++) {
+            $(".dropdown-menu.dropdown-menu-left").append(" <li  class=\"text-center\"><a href=\"productDynamic\" menuName=\"" + data[i] + "\">" + data[i] + "</a></li>"
+            );
+        }
+
+
+        $("[menuname]").click(function (e) {
+            // alert($(e.target).attr("id"));
+            let menuName = $(e.target).attr("menuName");
+            //设置cookie
+         //   $.cookie('product', menuName);
+            //获取cookie
+            // $.cookie('product')
+            getProductByGet(menuName);
+        });
+
+    });
+}
+
+
+
 var getProducts = function () {
 
     $.ajax({
@@ -77,8 +70,15 @@ var getProducts = function () {
 
     });
 }
-var getProductByGet = function (product) {
 
+let clearHref = function () {
+    let children = $(".dropdown-menu.dropdown-menu-left").find('a');
+    for (let i = 0; i < children.length; i++) {
+        children[i].setAttribute("href", "#");
+    }
+}
+
+var getProductByGet = function (product) {
     $.get("/getProducts?productname=" + product, function (data) {
         // for (let val of data) {
         //    val.imageURL
@@ -126,63 +126,13 @@ var getProductByGet = function (product) {
                     "")
             }
         }
+
+        clearHref();
     });
 
 
 }
 
-
-var getProductByGet2 = function (product) {
-    $.get("/getProducts?productname=" + product, function (data) {
-        // for (let val of data) {
-        //    val.imageURL
-        // }
-        for (let i = 0; i < data.length; i++) {
-            if (i % 2 == 0) {
-                $('.first-section-a').after("<div class=\"content-section-b\">\n" +
-                    "\n" +
-                    "    <div class=\"container\">\n" +
-                    "\n" +
-                    "        <div class=\"row\">\n" +
-                    "            <div class=\"col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6\">\n" +
-                    "                <hr class=\"section-heading-spacer\">\n" +
-                    "                <div class=\"clearfix\"></div>\n" +
-                    "                <h2 class=\"section-heading\">" + data[i].productname + "</h2>\n" +
-                    "                <p class=\"lead\">Description:" + "+data[i].description+" + "</p>\n" +
-                    "            </div>\n" +
-                    "            <div class=\"col-lg-5 col-sm-pull-6  col-sm-6\">\n" +
-                    "                <img class=\"img-responsive\" src=\"" + data[i].imagepath + "\" alt=\"\">\n" +
-                    "            </div>\n" +
-                    "        </div>\n" +
-                    "\n" +
-                    "    </div>\n" +
-                    "    <!-- /.container -->\n" +
-                    "\n" +
-                    "</div>");
-            } else {
-                $('.first-section-a').after("<div class=\"content-section-a\">\n" +
-                    "    <div class=\"container\">\n" +
-                    "        <div class=\"row\">\n" +
-                    "            <div class=\"col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6\">\n" +
-                    "                <hr class=\"section-heading-spacer\">\n" +
-                    "                <div class=\"clearfix\"></div>\n" +
-                    "                <h2 class=\"section-heading\">" + data[i].productname + "</h2>\n" +
-                    "                <p class=\"lead\">Description:" + "+data[i].description+" + "</p>\n" +
-                    "            </div>\n" +
-                    "            <div class=\"col-lg-5 col-sm-pull-6  col-sm-6\">\n" +
-                    "                <img class=\"img-responsive\" src=\"" + data[i].imagepath + "\" alt=\"\">\n" +
-                    "            </div>\n" +
-                    "        </div>\n" +
-                    "    </div>\n" +
-                    "</div>" +
-                    "")
-            }
-        }
-    });
-
-
-}
-//点击的事件源
 
 
 
