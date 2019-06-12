@@ -20,4 +20,14 @@ public class ProductService {
             return null;
         }
     }
+
+    public List<String> getProductNames() {
+        try {
+            return productMapper.getProductNames( );
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

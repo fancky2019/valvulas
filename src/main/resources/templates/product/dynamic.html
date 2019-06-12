@@ -13,13 +13,16 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
           type="text/css">
+
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
     <link rel="icon" href="img/titleIco.ico" type="image/x-icon"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,18 +62,19 @@
                         <!--<span class="caret"></span>-->
                     </a>
                     <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                        <!--<li class="disabled text-center"><a href="#"></a></li>-->
-<!--                        href="":刷新当前页-->
-<!--                        href="#":当前页不刷新-->
-                        <li  class="text-center"><a href="#" menuName="balance">Balance Valve</a></li>
-                        <li  class="text-center"><a href="#"  menuName="brassAngle">Brass Angle Valve</a></li>
-                        <li  class="text-center"><a href="#"  menuName="brassBall">Brass Ball Valve</a></li>
-                        <li  class="text-center"><a href="#"  menuName="bronze">Bronze Valve</a></li>
-                        <li  class="text-center"><a  href="#" menuName="check">Check Valve</a></li>
-                        <li  class="text-center"><a href="#" menuName="gate">Gate Valve</a></li>
-                        <li  class="text-center"><a href="#" menuName="pressureReduce">Pressure Reduce Valve</a></li>
-                        <!--<li class="divider"></li>-->
-                        <!--分割线-->
+<!--                        &lt;!&ndash;<li class="disabled text-center"><a href="#"></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        href="":刷新当前页&ndash;&gt;-->
+<!--&lt;!&ndash;                        href="#":当前页不刷新&ndash;&gt;-->
+<!--                        onclick的事件被先执行，其次是href中定义的（页面跳转或者javascript）-->
+<!--                        <li  class="text-center"><a href="#" menuName="balance">Balance Valve</a></li>-->
+<!--                        <li  class="text-center"><a href="#"  menuName="brassAngle">Brass Angle Valve</a></li>-->
+<!--                        <li  class="text-center"><a href="#"  menuName="brassBall">Brass Ball Valve</a></li>-->
+<!--                        <li  class="text-center"><a href="#"  menuName="bronze">Bronze Valve</a></li>-->
+<!--                        <li  class="text-center"><a  href="#" menuName="check">Check Valve</a></li>-->
+<!--                        <li  class="text-center"><a href="#" menuName="gate">Gate Valve</a></li>-->
+<!--                        <li  class="text-center"><a href="#" menuName="pressureReduce">Pressure Reduce Valve</a></li>-->
+<!--                        &lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+<!--                        &lt;!&ndash;分割线&ndash;&gt;-->
                     </ul>
                 </li>
                 <li>
@@ -115,7 +119,6 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery/jquery.cookie.js"></script>
-<script src="js/index.js"></script>
 <script src="js/product.js"></script>
 <script>
     // $(".headerpage").load("header.html");

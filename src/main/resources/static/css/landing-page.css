@@ -192,3 +192,8 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+/*a.hand:hover   {cursor:hand}*/
+
+a:active, a:hover {
+    cursor:hand;
+}

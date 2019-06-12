@@ -144,5 +144,7 @@
     </if>
   </select>
 
-
+  <select id="getProductNames"  resultType="java.lang.String">
+  SELECT DISTINCT ProductName FROM `valvulas`.`product`;
+  </select>
 </mapper>
