@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     /*公共部分
      * 导航栏
      * footer CopyRight
@@ -13,8 +13,8 @@ var createProductMenus = function () {
     $.get("/getProductNames", function (data) {
         $('.dropdown-menu.dropdown-menu-left').empty();
         for (let i = 0; i < data.length; i++) {
-            $(".dropdown-menu.dropdown-menu-left").append(" <li  class=\"text-center\"><a href=\"productDynamic\" menuName=\""+data[i]+"\">"+data[i]+"</a></li>"
-                );
+            $(".dropdown-menu.dropdown-menu-left").append(" <li  class=\"text-center\"><a href=\"productDynamic\" menuName=\"" + data[i] + "\">" + data[i] + "</a></li>"
+            );
         }
 
 
