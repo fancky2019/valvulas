@@ -34,7 +34,7 @@ var createProductMenus = function () {
             // alert($(e.target).attr("id"));
             let menuName = $(e.target).attr("menuName");
             //设置cookie
-         //   $.cookie('product', menuName);
+            //   $.cookie('product', menuName);
             //获取cookie
             // $.cookie('product')
             getProductByGet(menuName);
@@ -42,7 +42,6 @@ var createProductMenus = function () {
 
     });
 }
-
 
 
 var getProducts = function () {

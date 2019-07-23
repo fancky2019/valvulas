@@ -3,148 +3,150 @@
 <mapper namespace="com.valvulas.fancky.dao.ProductMapper">
 
 
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="com.valvulas.fancky.model.entity.Product">
-    select  *
-    from product
-    where ID = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from product
-    where ID = #{id,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.valvulas.fancky.model.entity.Product">
-    insert into product (ID, GUID, ProductName,
-      ProductStyle, ImagePath, CreadteTime,
-      ModifyTime, Status, Description,
-      TimeStamp)
-    values (#{id,jdbcType=INTEGER}, #{guid,jdbcType=VARCHAR}, #{productname,jdbcType=VARCHAR},
-      #{productstyle,jdbcType=VARCHAR}, #{imagepath,jdbcType=VARCHAR}, #{creadtetime,jdbcType=TIMESTAMP},
-      #{modifytime,jdbcType=TIMESTAMP}, #{status,jdbcType=SMALLINT}, #{description,jdbcType=VARCHAR},
-      #{timestamp,jdbcType=TIMESTAMP})
-  </insert>
-  <insert id="insertSelective" parameterType="com.valvulas.fancky.model.entity.Product">
-    insert into product
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        ID,
-      </if>
-      <if test="guid != null">
-        GUID,
-      </if>
-      <if test="productname != null">
-        ProductName,
-      </if>
-      <if test="productstyle != null">
-        ProductStyle,
-      </if>
-      <if test="imagepath != null">
-        ImagePath,
-      </if>
-      <if test="creadtetime != null">
-        CreadteTime,
-      </if>
-      <if test="modifytime != null">
-        ModifyTime,
-      </if>
-      <if test="status != null">
-        Status,
-      </if>
-      <if test="description != null">
-        Description,
-      </if>
-      <if test="timestamp != null">
-        TimeStamp,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="guid != null">
-        #{guid,jdbcType=VARCHAR},
-      </if>
-      <if test="productname != null">
-        #{productname,jdbcType=VARCHAR},
-      </if>
-      <if test="productstyle != null">
-        #{productstyle,jdbcType=VARCHAR},
-      </if>
-      <if test="imagepath != null">
-        #{imagepath,jdbcType=VARCHAR},
-      </if>
-      <if test="creadtetime != null">
-        #{creadtetime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="modifytime != null">
-        #{modifytime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="status != null">
-        #{status,jdbcType=SMALLINT},
-      </if>
-      <if test="description != null">
-        #{description,jdbcType=VARCHAR},
-      </if>
-      <if test="timestamp != null">
-        #{timestamp,jdbcType=TIMESTAMP},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.valvulas.fancky.model.entity.Product">
-    update product
-    <set>
-      <if test="guid != null">
-        GUID = #{guid,jdbcType=VARCHAR},
-      </if>
-      <if test="productname != null">
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer"
+            resultType="com.valvulas.fancky.model.entity.Product">
+        select *
+        from product
+        where ID = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from product
+        where ID = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.valvulas.fancky.model.entity.Product">
+        insert into product (ID, GUID, ProductName,
+        ProductStyle, ImagePath, CreadteTime,
+        ModifyTime, Status, Description,
+        TimeStamp)
+        values (#{id,jdbcType=INTEGER}, #{guid,jdbcType=VARCHAR}, #{productname,jdbcType=VARCHAR},
+        #{productstyle,jdbcType=VARCHAR}, #{imagepath,jdbcType=VARCHAR}, #{creadtetime,jdbcType=TIMESTAMP},
+        #{modifytime,jdbcType=TIMESTAMP}, #{status,jdbcType=SMALLINT}, #{description,jdbcType=VARCHAR},
+        #{timestamp,jdbcType=TIMESTAMP})
+    </insert>
+    <insert id="insertSelective" parameterType="com.valvulas.fancky.model.entity.Product">
+        insert into product
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                ID,
+            </if>
+            <if test="guid != null">
+                GUID,
+            </if>
+            <if test="productname != null">
+                ProductName,
+            </if>
+            <if test="productstyle != null">
+                ProductStyle,
+            </if>
+            <if test="imagepath != null">
+                ImagePath,
+            </if>
+            <if test="creadtetime != null">
+                CreadteTime,
+            </if>
+            <if test="modifytime != null">
+                ModifyTime,
+            </if>
+            <if test="status != null">
+                Status,
+            </if>
+            <if test="description != null">
+                Description,
+            </if>
+            <if test="timestamp != null">
+                TimeStamp,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="guid != null">
+                #{guid,jdbcType=VARCHAR},
+            </if>
+            <if test="productname != null">
+                #{productname,jdbcType=VARCHAR},
+            </if>
+            <if test="productstyle != null">
+                #{productstyle,jdbcType=VARCHAR},
+            </if>
+            <if test="imagepath != null">
+                #{imagepath,jdbcType=VARCHAR},
+            </if>
+            <if test="creadtetime != null">
+                #{creadtetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifytime != null">
+                #{modifytime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=SMALLINT},
+            </if>
+            <if test="description != null">
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="timestamp != null">
+                #{timestamp,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.valvulas.fancky.model.entity.Product">
+        update product
+        <set>
+            <if test="guid != null">
+                GUID = #{guid,jdbcType=VARCHAR},
+            </if>
+            <if test="productname != null">
+                ProductName = #{productname,jdbcType=VARCHAR},
+            </if>
+            <if test="productstyle != null">
+                ProductStyle = #{productstyle,jdbcType=VARCHAR},
+            </if>
+            <if test="imagepath != null">
+                ImagePath = #{imagepath,jdbcType=VARCHAR},
+            </if>
+            <if test="creadtetime != null">
+                CreadteTime = #{creadtetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifytime != null">
+                ModifyTime = #{modifytime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                Status = #{status,jdbcType=SMALLINT},
+            </if>
+            <if test="description != null">
+                Description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="timestamp != null">
+                TimeStamp = #{timestamp,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.valvulas.fancky.model.entity.Product">
+        update product
+        set GUID = #{guid,jdbcType=VARCHAR},
         ProductName = #{productname,jdbcType=VARCHAR},
-      </if>
-      <if test="productstyle != null">
         ProductStyle = #{productstyle,jdbcType=VARCHAR},
-      </if>
-      <if test="imagepath != null">
         ImagePath = #{imagepath,jdbcType=VARCHAR},
-      </if>
-      <if test="creadtetime != null">
         CreadteTime = #{creadtetime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="modifytime != null">
         ModifyTime = #{modifytime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="status != null">
         Status = #{status,jdbcType=SMALLINT},
-      </if>
-      <if test="description != null">
         Description = #{description,jdbcType=VARCHAR},
-      </if>
-      <if test="timestamp != null">
-        TimeStamp = #{timestamp,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where ID = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.valvulas.fancky.model.entity.Product">
-    update product
-    set GUID = #{guid,jdbcType=VARCHAR},
-      ProductName = #{productname,jdbcType=VARCHAR},
-      ProductStyle = #{productstyle,jdbcType=VARCHAR},
-      ImagePath = #{imagepath,jdbcType=VARCHAR},
-      CreadteTime = #{creadtetime,jdbcType=TIMESTAMP},
-      ModifyTime = #{modifytime,jdbcType=TIMESTAMP},
-      Status = #{status,jdbcType=SMALLINT},
-      Description = #{description,jdbcType=VARCHAR},
-      TimeStamp = #{timestamp,jdbcType=TIMESTAMP}
-    where ID = #{id,jdbcType=INTEGER}
-  </update>
+        TimeStamp = #{timestamp,jdbcType=TIMESTAMP}
+        where ID = #{id,jdbcType=INTEGER}
+    </update>
 
-  <select id="getProducts"  parameterType="com.valvulas.fancky.model.entity.Product" resultType="com.valvulas.fancky.model.entity.Product">
-    select  * from product
-    where 1=1
-    <if test="productname != null">
-      and ProductName LIKE CONCAT('%',#{productname,jdbcType=VARCHAR},'%')
-    </if>
-  </select>
+    <select id="getProducts" parameterType="com.valvulas.fancky.model.entity.Product"
+            resultType="com.valvulas.fancky.model.entity.Product">
+        select * from product
+        where 1=1
+        <if test="productname != null">
+            and ProductName LIKE CONCAT('%',#{productname,jdbcType=VARCHAR},'%')
+        </if>
+    </select>
 
-  <select id="getProductNames"  resultType="java.lang.String">
-  SELECT DISTINCT ProductName FROM `valvulas`.`product`;
-  </select>
+    <select id="getProductNames" resultType="java.lang.String">
+        SELECT DISTINCT ProductName FROM `valvulas`.`product`;
+    </select>
 </mapper>

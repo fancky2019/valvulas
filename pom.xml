@@ -23,10 +23,10 @@
     </properties>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -43,13 +43,13 @@
             <version>2.0.1</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-tomcat</artifactId>-->
-<!--            &lt;!&ndash;打包的时候可以不用包进去，别的设施会提供。事实上该依赖理论上可以参与编译，测试，运行等周期。-->
-<!--                相当于compile，但是打包阶段做了exclude操作&ndash;&gt;-->
-<!--            <scope>provided</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-tomcat</artifactId>-->
+        <!--            &lt;!&ndash;打包的时候可以不用包进去，别的设施会提供。事实上该依赖理论上可以参与编译，测试，运行等周期。-->
+        <!--                相当于compile，但是打包阶段做了exclude操作&ndash;&gt;-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
 
         <!-- mysql-->
         <dependency>
@@ -64,14 +64,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
-
-
-
-
-
-
 
 
         <!-- 对象与JSON之间相互转换 -->
@@ -91,13 +83,11 @@
         </dependency>
 
 
-
-
-<!--&lt;!&ndash;        默认日志：新建并配置日志配置文件：resources/logback.xml&ndash;&gt;-->
-<!--        <dependency>-->
-<!--        <groupId>org.slf4j</groupId>-->
-<!--        <artifactId>slf4j-log4j12</artifactId>-->
-<!--        </dependency>-->
+        <!--&lt;!&ndash;        默认日志：新建并配置日志配置文件：resources/logback.xml&ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--        <groupId>org.slf4j</groupId>-->
+        <!--        <artifactId>slf4j-log4j12</artifactId>-->
+        <!--        </dependency>-->
     </dependencies>
 
     <build>
