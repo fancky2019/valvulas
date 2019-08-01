@@ -1,3 +1,6 @@
+
+server:
+  port: 8090
 #公共配置与profiles选择无关 mapperLocations指的路径是src/main/resources
 #mapper路径和实体对象路径
 mybatis:
@@ -25,7 +28,8 @@ spring:
   #      static-locations: classpath:/
   datasource:
     #注意冒号有空格
-    url: jdbc:mysql://127.0.0.1:3306/valvulas?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://39.97.186.80:3307/valvulas?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    #url: jdbc:mysql://127.0.0.1:3306/valvulas?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
