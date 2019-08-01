@@ -12,9 +12,9 @@
     <artifactId>fancky</artifactId>
     <version>test</version>
     <!--默认为jar方式-->
-    <!--<packaging>jar</packaging>-->
+    <packaging>jar</packaging>
     <!--改为war方式-->
-    <packaging>war</packaging>
+<!--    <packaging>war</packaging>-->
     <name>fancky</name>
     <description>website project for Spring Boot</description>
 

@@ -15,8 +15,9 @@ public class FanckyApplication extends SpringBootServletInitializer {
         SpringApplication.run(FanckyApplication.class, args);
     }
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(FanckyApplication.class);
-    }
+//        <!--改为war方式-->
+//    @Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+//        return builder.sources(FanckyApplication.class);
+//    }
 }
