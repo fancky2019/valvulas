@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 
 @SpringBootApplication
-@MapperScan("com.valvulas.fancky.dao")
+//@MapperScan("com.valvulas.fancky.dao")
 public class FanckyApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
