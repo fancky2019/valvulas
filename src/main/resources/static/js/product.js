@@ -44,14 +44,13 @@ var createProductMenus = function () {
 }
 
 
-var getProducts = function () {
+var deleteProducts = function () {
 
     $.ajax({
         type: "post",//向后台请求的方式，有post，get两种方法
         url: "/deleteUser",//url填写的是请求的路径
         cache: false,//缓存是否打开
         data: {//请求的数据，
-            orgId: OrgId,
             "userIds": userId
         },
         dataType: 'json',//请求的数据类型
