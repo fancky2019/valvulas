@@ -13,6 +13,15 @@ public class ProductService {
     @Autowired
     ProductMapper productMapper;
 
+    public int insert(Product product) {
+        try {
+            return productMapper.insert(product);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
+
     public List<Product> getProducts(Product product) {
         try {
             return productMapper.getProducts(product);
