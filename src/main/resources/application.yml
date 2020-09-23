@@ -27,9 +27,15 @@ spring:
   #    resources:
   #      static-locations: classpath:/
   datasource:
-    #注意冒号有空格
-#    url: jdbc:mysql://39.97.186.80:3307/valvulas?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    url: jdbc:mysql://127.0.0.1:3306/valvulas?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 123456
+#    #注意冒号有空格
+#    url: jdbc:mysql://39.97.186.80:3306/valvulas?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+#  #  url: jdbc:mysql://127.0.0.1:3306/valvulas?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: Li5rui31987.
+#  #  password: 123456
+
+
+#D:\fancky\Git\Java\valvulas\sqlite
+    url: jdbc:sqlite:D:/fancky/Git/Java/valvulas/sqlite/valvulas.db
+    driver-class-name: org.sqlite.JDBC

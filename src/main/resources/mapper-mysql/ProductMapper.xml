@@ -14,11 +14,11 @@
         where ID = #{id,jdbcType=INTEGER}
     </delete>
     <insert id="insert" parameterType="com.valvulas.fancky.model.entity.Product">
-        insert into product ( GUID, ProductName,
+        insert into product (ID, GUID, ProductName,
         ProductStyle, ImagePath, CreadteTime,
         ModifyTime, Status, Description,
         TimeStamp)
-        values ( #{guid,jdbcType=VARCHAR}, #{productname,jdbcType=VARCHAR},
+        values (#{id,jdbcType=INTEGER}, #{guid,jdbcType=VARCHAR}, #{productname,jdbcType=VARCHAR},
         #{productstyle,jdbcType=VARCHAR}, #{imagepath,jdbcType=VARCHAR}, #{creadtetime,jdbcType=TIMESTAMP},
         #{modifytime,jdbcType=TIMESTAMP}, #{status,jdbcType=SMALLINT}, #{description,jdbcType=VARCHAR},
         #{timestamp,jdbcType=TIMESTAMP})
@@ -142,11 +142,11 @@
         select * from product
         where 1=1
         <if test="productname != null">
-            and ProductName like #{productname}
+            and ProductName LIKE CONCAT('%',#{productname,jdbcType=VARCHAR},'%')
         </if>
     </select>
 
     <select id="getProductNames" resultType="java.lang.String">
-        SELECT DISTINCT ProductName FROM product;
+        SELECT DISTINCT ProductName FROM `valvulas`.`product`;
     </select>
 </mapper>
