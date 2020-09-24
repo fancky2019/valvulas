@@ -15,6 +15,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
 /*
 --         concat  是mysql的，sqlite不支持
 --             and ProductName LIKE CONCAT('%',#{productname,jdbcType=VARCHAR},'%')
@@ -93,11 +94,47 @@ public class ProductController {
         List<String> list = new ArrayList<>();
         try {
             list = productService.getProductNames();
-            int m=0;
+            int m = 0;
         } catch (Exception ex) {
             logger.error(ex.getMessage());
         }
         return list;
+    }
+
+//%Tomcat_Home%/bin
+    @RequestMapping("/getRelativelyPath")
+    @ResponseBody
+    public String getRelativelyPath() {
+
+        try {
+            String relativelyPath = System.getProperty("user.dir");
+
+            return relativelyPath;
+
+
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
+            return "ex.getMessage()";
+        }
+
+    }
+
+    ///D:/fancky/Java/tomcat/apache-tomcat-9.0.16/webapps/fancky-test/WEB-INF/classes/
+    @RequestMapping("/getWebAppPath")
+    @ResponseBody
+    public String getWebAppPath() {
+
+        try {
+            String relativelyPath = this.getClass().getClassLoader().getResource("/").getPath();
+//this.getClass().getClassLoader().getResource("/").getPath();
+            return relativelyPath;
+
+
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
+            return "ex.getMessage()";
+        }
+
     }
 
 
