@@ -45,8 +45,8 @@ spring:
     #D:\fancky\Git\Java\valvulas\sqlite
 #    unix
 #    url: jdbc:sqlite:/usr/sqlite/valvulas.db
-    # #方式一：磁盘路径
-    url: jdbc:sqlite:D:/fancky/Git/Java/valvulas/sqlite/valvulas.db
+    # #方式一：磁盘路径  D:\Work\Project\Git\java\valvulas\sqlite
+    url: jdbc:sqlite:D:/Work/Project/Git/Java/valvulas/sqlite/valvulas.db
     #方式二：引用项目中的文件:resources/static/sqlite//valvulas.db
     # 引用项目内的db文件，必须以jdbc:sqlite::resource: 开头
 #    url: jdbc:sqlite::resource:static/sqlite/valvulas.db
