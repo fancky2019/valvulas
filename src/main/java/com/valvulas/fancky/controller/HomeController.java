@@ -113,9 +113,9 @@ public class HomeController {
     //http://localhost:8080/login?name=fancky&password=pas
     @GetMapping("/login")
     @ResponseBody
-    public String login(String name,String password) {
-        logger.info(name+","+password);
-        return MessageFormat.format("{0}:{1}", applicationName, name+","+password);
+    public String login(String name, String password) {
+        logger.info(name + "," + password);
+        return MessageFormat.format("{0}:{1}", applicationName, name + "," + password);
     }
     //endregion
 }

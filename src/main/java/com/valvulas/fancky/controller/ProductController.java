@@ -101,7 +101,7 @@ public class ProductController {
         return list;
     }
 
-//%Tomcat_Home%/bin
+    //%Tomcat_Home%/bin
     @RequestMapping("/getRelativelyPath")
     @ResponseBody
     public String getRelativelyPath() {
