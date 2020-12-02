@@ -31,7 +31,7 @@ spring:
   #      static-locations: classpath:/
   #解决：Unable to register MBean [HikariDataSource (null)] with key 'dataSource';
   jmx:
-   enabled: false
+    enabled: false
   datasource:
     #    #注意冒号有空格
     #    url: jdbc:mysql://39.97.186.80:3306/valvulas?useUnicode=true&characterEncoding=utf8&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
@@ -43,11 +43,11 @@ spring:
 
 
     #D:\fancky\Git\Java\valvulas\sqlite
-#    unix
-#    url: jdbc:sqlite:/usr/sqlite/valvulas.db
+    #    unix
+    #    url: jdbc:sqlite:/usr/sqlite/valvulas.db
     # #方式一：磁盘路径  D:\Work\Project\Git\java\valvulas\sqlite
     url: jdbc:sqlite:D:/Work/Project/Git/Java/valvulas/sqlite/valvulas.db
     #方式二：引用项目中的文件:resources/static/sqlite//valvulas.db
     # 引用项目内的db文件，必须以jdbc:sqlite::resource: 开头
-#    url: jdbc:sqlite::resource:static/sqlite/valvulas.db
+    #    url: jdbc:sqlite::resource:static/sqlite/valvulas.db
     driver-class-name: org.sqlite.JDBC

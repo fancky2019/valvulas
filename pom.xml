@@ -12,7 +12,7 @@
     <artifactId>fancky</artifactId>
     <version>test</version>
     <!--默认为jar方式-->
-<!--    <packaging>jar</packaging>-->
+    <!--    <packaging>jar</packaging>-->
     <!--改为war方式-->
     <packaging>war</packaging>
     <name>applicationname-valvulas</name>
@@ -54,7 +54,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
-<!--        如果log4j2配置文件是yml要加此配置，如果是xml配置不用加-->
+        <!--        如果log4j2配置文件是yml要加此配置，如果是xml配置不用加-->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-yaml</artifactId>
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-<!--            <scope>runtime</scope>-->
+            <!--            <scope>runtime</scope>-->
         </dependency>
 
         <dependency>
@@ -91,7 +91,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-<!--            <scope>test</scope>-->
+            <!--            <scope>test</scope>-->
         </dependency>
 
 
